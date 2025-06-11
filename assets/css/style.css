@@ -2082,3 +2082,102 @@ textarea.form-input::-webkit-resizer {
 .availability-status strong {
   color: var(--primary-color, #ffffff);
 }
+
+/* Contact Availability Card Styles */
+.availability-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  background: var(--bg-gradient-onyx, #232526);
+  border-radius: 18px;
+  padding: 32px 28px;
+  margin: 40px 0 0 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  min-height: 180px;
+}
+
+.availability-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-gradient, #4e54c8);
+  color: #fff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.availability-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.availability-status-row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.status-label {
+  font-weight: 600;
+  color: var(--primary-color, #4e54c8);
+  min-width: 80px;
+}
+
+.status-value {
+  font-weight: 500;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-value.open {
+  color: #4caf50;
+}
+
+.location-type {
+  color: #aaa;
+  font-size: 0.95em;
+  margin-left: 6px;
+}
+
+/* Responsive styles for availability card */
+@media (max-width: 600px) {
+  .availability-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 16px;
+    min-height: unset;
+  }
+  .availability-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+  }
+  .availability-content {
+    align-items: center;
+    text-align: center;
+  }
+  .availability-status-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin: 8px 0;
+  }
+  .status-label {
+    min-width: unset;
+    font-size: 1em;
+  }
+}
+
+article.contact[data-page="contact"] {
+  min-height: unset;
+}
